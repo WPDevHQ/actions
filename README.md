@@ -1,2 +1,2 @@
-# actions
-An actionable starter theme for WordPress.
+# Actions
+An actionable parent theme for WordPress.
