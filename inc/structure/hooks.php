@@ -40,8 +40,10 @@ add_action( 'actions_content_body_after',     'actions_body_bottom',		  10 );
  * @see  actions_footer_widgets()
  * @see  actions_credit()
  */
+add_action( 'actions_content_wrapper_start',  'actions_top_wrapper',          10 );
 add_action( 'actions_before_content_wrapper', 'actions_top_wrapper',          10 );
 add_action( 'actions_after_content_wrapper',  'actions_bottom_wrapper',       10 );
+add_action( 'actions_content_wrapper_end',    'actions_bottom_wrapper',       10 );
 
 /**
  * Sidebar
@@ -58,7 +60,7 @@ add_action( 'actions_after_sidebar',	      'actions_bottom_sidebar',       10 );
  */
 add_action( 'actions_footer_elements_before', 'actions_footer_before',	      10 );
 add_action( 'actions_footer_elements',        'actions_footer_credit',		  20 );
-add_action( 'actions_footer_elements_after', 'actions_footer_before',	      10 );
+add_action( 'actions_footer_elements_after',  'actions_footer_before',	      10 );
 
 /**
  * Posts

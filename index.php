@@ -26,11 +26,11 @@ get_header();
 				
 			do_action( 'actions_after_index_elements' );
         
-		// If no content, include the "No posts found" template.
+		// If no content, include the "No posts found" action.
 		else :
 			do_action( 'actions_before_content_none' );
 			
-			    get_template_part( 'template-parts/content', 'none' );
+			    do_action( 'actions_index_content_none' );
 				
 			do_action( 'actions_after_content_none' );
 			

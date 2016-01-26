@@ -71,7 +71,7 @@ if ( ! function_exists( 'actions_paging_nav' ) ) {
 	 * Display navigation to next/previous set of posts when applicable.
 	 */
 	function actions_paging_nav() {
-// Previous/next page navigation.
+    // Previous/next page navigation.
 			the_posts_pagination( array(
 				'prev_text'          => __( 'Previous page', 'actions' ),
 				'next_text'          => __( 'Next page', 'actions' ),
