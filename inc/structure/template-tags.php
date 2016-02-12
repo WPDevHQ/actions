@@ -5,7 +5,7 @@
  * Eventually, some of the functionality here could be replaced by core features.
  */
 
-if ( ! function_exists( 'actions_paging_nav' ) ) :
+if ( ! function_exists( 'actions_paging_nav' ) ) {
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
@@ -33,9 +33,9 @@ function actions_paging_nav() {
 	</nav>
 	<?php
 }
-endif;
+}
 
-if ( ! function_exists( 'actions_post_nav' ) ) :
+if ( ! function_exists( 'actions_post_nav' ) ) {
 /**
  * Display navigation to next/previous post when applicable.
  *
@@ -61,9 +61,9 @@ function actions_post_nav() {
 	</nav>
 	<?php
 }
-endif;
+}
 
-if ( ! function_exists( 'actions_posted_on' ) ) :
+if ( ! function_exists( 'actions_posted_on' ) ) {
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
@@ -107,7 +107,7 @@ function actions_posted_on() {
 		<span class="comments-link"><i class="fa fa-comments"></i><?php comments_popup_link( __( 'Comments', 'actions' ), __( '1 Comment', 'actions' ), __( '% Comments', 'actions' ) ); ?></span>
 	<?php endif;
 }
-endif;
+}
 
 /**
  * Returns true if a blog has more than 1 category.
@@ -163,7 +163,7 @@ if ( ! function_exists( 'actions_post_thumbnail' ) ) {
 	}
 }
 
-if ( ! function_exists( 'actions_entry_taxonomies' ) ) :
+if ( ! function_exists( 'actions_entry_taxonomies' ) ) {
 /**
  * Prints HTML with category and tags for current post.
  *
@@ -188,4 +188,4 @@ function actions_entry_taxonomies() {
 		);
 	}
 }
-endif;
+}

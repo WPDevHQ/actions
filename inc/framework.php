@@ -11,7 +11,10 @@
  * @link    http://www.wpdevhq.com/themes/actions/
  */
  
-function actions() {
+/*
+ * Setup Home/Blog template Actions
+ */
+function actionsHome() {
 
 get_header();
  
@@ -28,6 +31,120 @@ get_header();
 			do_action( 'actions_after_index_elements' );
         
 		// If no content, include the "No posts found" template.
+		else :
+			do_action( 'actions_before_content_none' );
+			
+			    do_action( 'actions_index_content_none' );
+				
+			do_action( 'actions_after_content_none' );
+			
+		endif;
+		
+    do_action( 'actions_after_content_wrapper' );
+	
+	do_action( 'actions_sidebar' );
+	
+get_footer();
+}
+
+/*
+ * Setup Index template Actions
+ */
+function actionsIndex() {
+get_header();
+ 
+    do_action( 'actions_before_content_wrapper' );
+	
+	do_action( 'actions_before_index' );
+	
+        if ( have_posts() ) :
+		
+		    do_action( 'actions_before_index_elements' );
+			
+			    do_action( 'actions_index_elements' );
+				
+			do_action( 'actions_after_index_elements' );
+        
+		// If no content, include the "No posts found" action.
+		else :
+			do_action( 'actions_before_content_none' );
+			
+			    do_action( 'actions_index_content_none' );
+				
+			do_action( 'actions_after_content_none' );
+			
+		endif;
+		
+    do_action( 'actions_after_content_wrapper' );
+	
+	do_action( 'actions_sidebar' );
+	
+get_footer();
+}
+
+/*
+ * Setup default page template Actions
+ */
+function actionsPage() {
+	get_header();
+    
+	do_action( 'actions_before_content_wrapper' );
+	
+	do_action( 'actions_before_page' );
+	
+        while ( have_posts() ) : the_post();
+		    do_action( 'actions_page_elements' ); // Give your elements priorities so that they hook in the right place.
+		endwhile;
+		
+    do_action( 'actions_after_page' );
+	
+	do_action( 'actions_after_content_wrapper' );
+
+get_footer();
+}
+
+/*
+ * Setup dsingle post template Actions
+ */
+ 
+function actionsSingle() {
+get_header(); 
+
+    do_action( 'actions_before_content_wrapper' );
+	
+	    do_action( 'actions_before_single' );
+		
+            do_action( 'actions_single_post_elements' );
+			
+		    do_action( 'aactions_single_post_comments' );
+			
+        do_action( 'actions_after_single' );
+		
+    do_action( 'actions_after_content_wrapper' );	
+
+get_footer();
+}
+
+/*
+ * Setup dsingle post template Actions
+ */
+ 
+function actionsSearch() {
+get_header();
+ 
+    do_action( 'actions_before_content_wrapper' );
+	
+	do_action( 'actions_before_index' );
+	
+        if ( have_posts() ) :
+		
+		    do_action( 'actions_before_index_elements' );
+			
+			    do_action( 'actions_index_elements' );
+				
+			do_action( 'actions_after_index_elements' );
+        
+		// If no content, include the "No posts found" action.
 		else :
 			do_action( 'actions_before_content_none' );
 			

@@ -4,7 +4,7 @@
  Description:  Simple, clean and actionable WordPress theme built around Actions.
  Author:       WP DevHQ
  Author URI:   http://www.wpdevhq.com/
- Version:      1.0.1
+ Version:      1.0.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready, translation-ready
@@ -40,15 +40,27 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	vertical-align: baseline;
 }
+
+
+/**
+ * 4.0 - Elements
+ */
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 *,
 *:before,
 *:after {
-	-webkit-box-sizing:	border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
-	-ms-word-wrap:	break-word;
-	word-wrap:		break-word;
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
 }
+
 .header-area,
 .main-content-area {
 	background: #fff;
@@ -69,13 +81,35 @@ section {
 ol, ul {
 	list-style: none;
 }
+table,
+th,
+td {
+	border: 1px solid #eaeaea;
+	border: 1px solid rgba(51, 51, 51, 0.1);
+}
 table {
 	border-collapse: separate;
 	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	margin: 0 0 1.6em;
+	table-layout: fixed; /* Prevents HTML tables from becoming too wide */
+	width: 100%;
 }
-caption, th, td {
+caption,
+th,
+td {
 	font-weight: normal;
 	text-align: left;
+}
+th {
+	border-width: 0 1px 1px 0;
+	font-weight: 700;
+}
+td {
+	border-width: 0 1px 1px 0;
+}
+th, td {
+	padding: 0.4em;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -87,7 +121,9 @@ blockquote, q {
 }
 a img {
 	border: 0;
-}	
+}
+
+	
 
 /*--------------------------------------------------------------
 Structure
@@ -116,18 +152,18 @@ Structure
 
 a,
 .header-menu a:hover  {
-	color: #3498DB;
+	color: #3498db;
 }
 
 input[type="submit"],
 input[type="button"],
 .main-navigation,
 .main-navigation ul li:hover > ul {
-	background: #323A45;
+	background: #323a45;
 }
 
 .main-navigation a:hover {
-	background: #3498DB;
+	background: #3498db;
 }
 
 /*--------------------------------------------------------------
@@ -343,6 +379,54 @@ var,
     color: #8F9EB8;
 }
 
+**
+ * 9.0 - Clearings
+ */
+
+.clear:before,
+.clear:after,
+blockquote:before,
+blockquote:after,
+.entry-content:before,
+.entry-content:after,
+.entry-summary:before,
+.entry-summary:after,
+.comment-content:before,
+.comment-content:after,
+.site-content:before,
+.site-content:after,
+.site-main > article:before,
+.site-main > article:after,
+.primary-menu:before,
+.primary-menu:after,
+.social-links-menu:before,
+.social-links-menu:after,
+.textwidget:before,
+.textwidget:after,
+.content-bottom-widgets:before,
+.content-bottom-widgets:after {
+	content: "";
+	display: table;
+}
+
+.clear:after,
+blockquote:after,
+.entry-content:after,
+.entry-summary:after,
+.comment-content:after,
+.site-content:after,
+.site-main > article:after,
+.primary-menu:after,
+.social-links-menu:after,
+.textwidget:after,
+.content-bottom-widgets:after {
+	clear: both;
+}
+
+.site-title {
+	margin-bottom: 1.6em;
+}
+
 /*--------------------------------------------------------------
 Menus
 --------------------------------------------------------------*/
@@ -373,6 +457,7 @@ Menus
 .header-menu li {
 	float: left;
 	position: relative;
+	transition: all 1.2s;
 }
 .header-menu li:not(:last-child) {
 	padding-right: 24px;
@@ -397,7 +482,7 @@ Menus
 	float: left;
 	left: 0;
 	position: absolute;
-		top: 49px;
+	top: 49px;
 	z-index: 99999;
 	border-radius: 0 0 3px 3px;
 }
@@ -414,6 +499,7 @@ Menus
 .main-navigation ul ul li {
 }
 .main-navigation li:hover > a {
+	transition: all 1.2s;
 }
 .main-navigation ul ul :hover > a {
 }
@@ -532,16 +618,6 @@ Clearings
 	clear: both;
 }
 
-/*--------------------------------------------------------------
-Top bar
---------------------------------------------------------------*/
-.top-bar {
-	padding: 8px 0;
-}
-.site-description {
-	font-size: 16px;
-	margin-bottom: 0;
-}
 
 /*--------------------------------------------------------------
 Header
@@ -585,10 +661,10 @@ Content
 .sticky {
 }
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 1em;
 }
 .entry-header {
-	margin-bottom: 2em;
+	margin-bottom: 0.5em;
 }
 .entry-title,
 .widget-title {
@@ -597,7 +673,11 @@ Content
 	font-size: 1.75rem;
 	font-weight: 700;
 	line-height: 1.25;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
+}
+
+.entry-title {
+	margin-top: 1.5em;
 }
 
 .entry-title a {
@@ -632,10 +712,10 @@ footer.entry-meta,
 	margin-right: 2em;
 }
 .featured-image {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.2em;
 }
 .single-post-footer {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.2em;
 }
 .comments-link {
 	float: right;
@@ -1094,7 +1174,7 @@ Plugin support
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.site-header,
 	.top-bar {
 		text-align: center;

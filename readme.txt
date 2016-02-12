@@ -5,16 +5,17 @@ Tags: translation-ready, theme-options, custom-menu, post-formats, threaded-comm
 
 Requires at least: 4.0
 Tested up to: 4.4.1
-Stable tag: 1.0.1
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called Actions.
+A parent theme called Actions.
 Copyright (C) 2016 WPDevHQ http://www.wpdevhq.com/
 
 == Description ==
 
-Hi. I'm a starter theme called Actions. I'm a theme meant to be used as a Parent Theme for rapid development - so don't hack me please. Instead extend me by hooking in to my actions via a child theme and/or a functionality plugin.
+Hi. I'm a parent theme called Actions. I'm a theme meant to be used as a Parent for rapid development - so don't hack me please. 
+Instead extend me by hooking in to my actions via a child theme and/or a functionality plugin.
 
 == Installation ==
 	
@@ -39,5 +40,4 @@ Actions includes support for Infinite Scroll in Jetpack.
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * CSS/JS snippets from:
 		Twenty Sixteen - Copyright (C) the WordPress team https://wordpress.org/themes/twentysixteen/
-		Storefront - Copyright (C) WooThemes http://www.woothemes.com/storefront
 		Presentation Lite - Copyright (C) 2014 Sean Davis - SDavis Media LLC http://seandavis.co/ (Menu system)

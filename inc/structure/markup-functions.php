@@ -170,8 +170,8 @@ if ( ! function_exists( 'actions_footer_before' ) ) {
 	}
 }
 
-if ( ! function_exists( 'actions_footer_before' ) ) {
-	function actions_footer_before() {
+if ( ! function_exists( 'actions_footer_after' ) ) {
+	function actions_footer_after() {
 		?>
 		    </div>
 	    </div> 

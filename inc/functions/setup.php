@@ -83,10 +83,7 @@ if ( ! function_exists( 'actions_setup' ) ) :
             ),
             'size' => 'medium',
         );
-        add_theme_support( 'site-logo', $args );
-
-		// Declare WooCommerce support
-		add_theme_support( 'woocommerce' );
+        add_theme_support( 'site-logo', $args );		
 
 		// Declare support for title theme feature
 		add_theme_support( 'title-tag' );

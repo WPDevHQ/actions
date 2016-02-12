@@ -6,7 +6,6 @@
  * Please do all modifications in the form of a child theme.
  *
  * @package Actions\Search
- * @author  StudioPress
  * @license GPL-2.0+
  * @link    
  */

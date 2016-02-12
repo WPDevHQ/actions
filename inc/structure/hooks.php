@@ -29,7 +29,7 @@ add_action( 'actions_sidebar',			     'actions_get_sidebar',			 10 );
 add_action( 'actions_header_elements',        'actions_skip_links', 		  0 );
 add_action( 'actions_header_elements',        'actions_top_header',			  10 );
 add_action( 'actions_header_elements',        'actions_site_branding',		  20 );
-add_action( 'actions_header_elements',        'actions_primary_navigation',	  30 );
+add_action( 'actions_header_elements',        'actions_primary_navigation',	  40 );
 add_action( 'actions_header_elements',        'actions_bottom_header',		  50 );
 
 add_action( 'actions_content_body_before',    'actions_body_top',		      10 );

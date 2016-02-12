@@ -11,6 +11,8 @@
  * @link    http://www.wpdevhq.com/themes/actions/
  */
 
-//* Initialize Actions
+/** 
+ * Initialize Home Actions
+ */
 
-actions();
+actionsHome();

@@ -10,18 +10,8 @@
  * @package actions
  */
 
-get_header();
-    
-	do_action( 'actions_before_content_wrapper' );
-	
-	do_action( 'actions_before_page' );
-	
-        while ( have_posts() ) : the_post();
-		    do_action( 'actions_page_elements' ); // Give your elements priorities so that they hook in the right place.
-		endwhile;
-		
-    do_action( 'actions_after_page' );
-	
-	do_action( 'actions_after_content_wrapper' );
-
-get_footer(); ?>
+/** 
+ * Initialize Home Actions
+ */
+ 
+actionsPage();

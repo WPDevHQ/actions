@@ -29,23 +29,30 @@ if ( ! function_exists( 'actions_post_content' ) ) {
 	 * Display the post content with a link to the single post
 	 * @since 1.0.0
 	 */
-	function actions_post_content() {
+	function actions_post_content() { 
+	    if ( is_search() ) { ?>		
+		
+		    <header class="page-header">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'actions' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+			</header><!-- .page-header -->
+		
+		<?php }
 		
 		while ( have_posts() ) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php
-		actions_post_header();
+		<?php actions_post_header();
 		
 		?>
-		<div class="entry-content" itemprop="articleBody">
+		<div class="entry-content">
 		<?php
 		actions_post_thumbnail( 'full' );
 		if ( 'post' == get_post_type() ) { ?>
 			<div class="entry-meta">
 			<?php
-				actions_posted_on(); ?>
-				</div>
-			<?php }
+				actions_posted_on(); 
+			?>
+			</div>
+	    <?php }
 
 		the_content(
 			sprintf(
@@ -53,16 +60,16 @@ if ( ! function_exists( 'actions_post_content' ) ) {
 				'<span class="screen-reader-text">' . get_the_title() . '</span>'
 			)
 		);
-		//actions_entry_footer();
-        endwhile;
+		
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'actions' ),
 			'after'  => '</div>',
 		) );
-		?>
+		//actions_entry_footer(); ?>
 		</div><!-- .entry-content -->
 		</article><!-- #post-## -->
-		<?php
+        <?php endwhile;
+		
 	}
 }
 

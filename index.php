@@ -12,32 +12,8 @@
  * @package Actions
  */
 
-get_header();
+/** 
+ * Initialize Index Actions
+ */
  
-    do_action( 'actions_before_content_wrapper' );
-	
-	do_action( 'actions_before_index' );
-	
-        if ( have_posts() ) :
-		
-		    do_action( 'actions_before_index_elements' );
-			
-			    do_action( 'actions_index_elements' );
-				
-			do_action( 'actions_after_index_elements' );
-        
-		// If no content, include the "No posts found" action.
-		else :
-			do_action( 'actions_before_content_none' );
-			
-			    do_action( 'actions_index_content_none' );
-				
-			do_action( 'actions_after_content_none' );
-			
-		endif;
-		
-    do_action( 'actions_after_content_wrapper' );
-	
-	do_action( 'actions_sidebar' );
-	
-get_footer();
+actionsIndex();
