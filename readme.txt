@@ -31,7 +31,12 @@ Actions includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - February 01 2016 =
+= 1.0.1 - February 13 2016 =
+* Added site description as a title to the site name - File: header.php @lines 24 and 30
+* Added "the_post_navigation" from TwentySixteen - File: inc/structure/header.php code @lines 90 to 104
+* Minor CSS adjustments - added :focus to all :hover states - File: styles.css
+
+= 1.0.0 - February 01 2016 =
 * Initial release
 
 == Credits ==
@@ -39,5 +44,5 @@ Actions includes support for Infinite Scroll in Jetpack.
 * Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * CSS/JS snippets from:
-		Twenty Sixteen - Copyright (C) the WordPress team https://wordpress.org/themes/twentysixteen/
-		Presentation Lite - Copyright (C) 2014 Sean Davis - SDavis Media LLC http://seandavis.co/ (Menu system)
+	Twenty Sixteen - Copyright (C) the WordPress team https://wordpress.org/themes/twentysixteen/
+	Presentation Lite - Copyright (C) 2014 Sean Davis - SDavis Media LLC http://seandavis.co/ (Menu system)
