@@ -1,11 +1,11 @@
 === Actions ===
 
 Contributors: WPDevHQ
-Tags: translation-ready, theme-options, custom-menu, post-formats, threaded-comments
+Tags: Custom Menu, Custom Logo, Featured Images, Right Sidebar, Sticky Posts, Theme Options, Threaded Comments, Two Columns, Translation Ready, Blog
 
 Requires at least: 4.0
-Tested up to: 4.5.beta1
-Stable tag: 1.0.3
+Tested up to: 4.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,28 @@ Not at the moment.
 
 == Changelog ==
 
-= 1.0.3 =
+= 1.0.7 =
+* Fixed Edge Case bug on search results where link was missing for pages with no title.
+* Minor CSS adjustments for the search results page.
+
+= 1.0.6 =
+* Removed deprecated tags.
+* Refined header text function and removed custom customizer function for the same.
+* Removed accessibility tag for now and refined theme tags.
+
+= 1.0.5 = April 28 2016 =
+* Bringing theme in line with coding standards
+* Replace comments.php with that of Twenty Sixteen
+* Made the Framework functions plugable to make child theme override easier.
+* General code tidy up
+
+= 1.0.4 = April 13 2016 =
+* Added the required theme copyright declaration - File: style.css @line 24
+* Attempting to add Selective refresh - first iteration and a work in progress!
+* Minor CSS adjustments
+* Code and CSS clean up.
+
+= 1.0.3 = February 24 2016 =
 * New: Added support for the upcoming WordPress v4.5 support for site logo - Files: styles.css, inc/functions/setup.php @lines 78-83 &  and inc/structure/header.php @line 21 
 * Further refinement of the footer copyright/credit link output - File: inc/structure/footer.php @ lines 20 & 24
 * Escaping menu and sidebar registration - File: inc/functions/setup.php @Lines 59 and 100
@@ -39,7 +60,7 @@ Not at the moment.
 * Updated screenshot - File(s): screenshot.png
 * Tested theme againt the upcoming WordPress v4.5 release - tested on v4.5.beta1
 
-= 1.0.2 =
+= 1.0.2 = February 17 2016 =
 * Switch to "<?php bloginfo( 'name' ); ?>" instead of a predefined $title for site title - File: inc/structure/header.php @line 30
 * Refined Footer credits to automagically populate theme name, theme url and author depending on active theme (Parent or Child) - File: inc/structure/footer.php @lines All
 * Added action hooks for the footer wrapper as part of above refinement - Files: inc/structure/hooks.php @lines 56 to 62 and inc/structure/markup-functions.php @lines 113 to 141
