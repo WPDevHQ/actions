@@ -1,14 +1,14 @@
 # Actions
 
-**Contributors:** [WPDevHQ] (http://www.wpdevhq.com) 
-**Tags:** translation-ready, theme-options, custom-menu, post-formats, threaded-comments
-**Requires at least:** 4.0
-**Tested up to:** 4.6
-**Stable tag:** 1.0.7
-**License:** GPLv2 or later
-**License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+**Contributors:** [WPDevHQ] (http://www.wpdevhq.com)  
+**Tags:** translation-ready, theme-options, custom-menu, post-formats, threaded-comments   
+**Requires at least:** 4.0   
+**Tested up to:** 4.6   
+**Stable tag:** 1.0.7   
+**License:** GPLv2 or later   
+**License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)   
 
-A parent theme called Actions.
+A parent theme called Actions.   
 Copyright (C) 2016 [WPDevHQ](http://www.wpdevhq.com/)
 
 ## Description ##
